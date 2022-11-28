@@ -2,18 +2,18 @@
 <?php
 //POST送信で送られてきた名前を受け取って変数を作成
 $my_name = $_POST['my_name'];
-
-//①画像を参考に問題文の選択肢の配列を作成してください。
-
-//② ①で作成した、配列から正解の選択肢の変数を作成してください
 ?>
 
+<!-- ①画像を参考に問題文の選択肢の配列を作成してください。 -->
+<!-- ② ①で作成した、配列から正解の選択肢の変数を作成してください -->
 
-<p>お疲れ様です<!--POST通信で送られてきた名前を出力--><? echo $my_name; ?>さん</p>
+
+<!--POST通信で送られてきた名前を出力-->
+<p>お疲れ様です <?php echo $my_name; ?>さん</p>
 <!--フォームの作成 通信はPOST通信で-->
 <form action="answer.php" method="post">
 <!--取得した名前を送信-->
-    <input type="hidden" name="my_name" value="<? echo $my_name; ?>">
+    <input type="hidden" name="my_name" value="<?php echo $my_name; ?>">
 
     <h2>①ネットワークのポート番号は何番？</h2>
 <!--③ 問題のradioボタンを「foreach」を使って作成する-->
